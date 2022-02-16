@@ -1,10 +1,11 @@
 import React from 'react';
 import Tree from "./components/tree/Tree";
+import data from './components/tree/data';
 import './App.css';
 
 function App() {
 
-  const treeData: any[] = [];
+  const treeData: any[] = data;
 
   return (
     <div className="App">

@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 export interface TreeProps {
   autoPlace?: boolean;
@@ -19,9 +19,13 @@ export interface TreeProps {
   selectable?: boolean;
 }
 
-const Tree: React.FC<TreeProps> = (props) => {
+const Tree: React.FC<TreeProps> = ({data = []}) => {
 
-  console.log(props);
+  const [nodes, setNodes] = React.useState<any[]>([]);
+
+  React.useEffect(() => {
+    console.log(data);
+  }, [data])
 
   return (
     <div>Auto Tree</div>
